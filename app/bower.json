@@ -1,0 +1,14 @@
+{
+    "name": "angular-app",
+    "version": "0.0.1",
+    "dependencies": {
+        "angular": "*",
+        "angular-i18n": "*",
+        "angular-animate": "*",
+        "ngAnimate-animate.css": "*",
+        "angular-route": "*",
+        "angular-ui-bootstrap": "*",
+        "angular-strap": "*",
+        "bootstrap": "*"
+    }
+}

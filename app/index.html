@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <base href="/test/yii2/app/">
+    <meta charset="utf-8">
+    <meta name="fragment" content="!"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Angular App</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body ng-cloak="">
+
+<!--[if lte IE 9]>
+<p class="browsehappy">
+    Похоже, вы используете <strong>устаревшую версию</strong> Internet Explorer. <a href="http://browsehappy.com/">Обновите
+    свой браузер</a>.
+</p>
+<![endif]-->
+
+<div class="navbar navbar-default" role="navigation" bs-navbar>
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">AppLogo</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li data-match-route="/?(navbar)?"><a href="">Home</a></li>
+            <li data-match-route="/page-one"><a href="">Post</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div ng-view>
+    </div>
+</div>
+
+<script src="vendor/angular/angular.min.js"></script>
+<script src="vendor/angular-i18n/angular-locale_ru.js"></script>
+<script src="vendor/angular-route/angular-route.min.js"></script>
+<script src="vendor/angular-animate/angular-animate.min.js"></script>
+<script src="vendor/angular-strap/dist/angular-strap.min.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>

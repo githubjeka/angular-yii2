@@ -39,6 +39,7 @@ $config = [
             'rules' => [
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
                 'GET <controller:\w+>' => '<controller>/index',
+                'GET <controller:\w+>/<id:\d+>' => '<controller>/view',
                 'POST api/v1/<controller:\w+>/<id:\d+>' => '<controller>/save',
                 'DELETE api/v1/<controller:\w+>/<id:\d+>' => '<controller>/delete',
             ],

@@ -1,0 +1,33 @@
+<div class="text-right">
+    <a href="post?expand=comments">show comments</a>
+</div>
+
+<section>
+
+    <div ng-repeat="post in posts">
+        <h1><a ng-href="post/{{post.id}}">{{post.title}}</a></h1>
+        <article>
+            {{post.content}}
+        </article>
+        <div class="badge">{{post.tags}}</div>
+        <div ng-if="post.comments">
+            <h3 class="sub-header">
+                Comments
+            </h3>
+
+            <div ng-repeat="comment in post.comments">
+                <blockquote>
+                    <h5>{{comment.author}}:</h5>
+
+                    <p>{{comment.content}}</p></blockquote>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<hr>
+<details>
+    <summary>JSON DATA</summary>
+    <pre>{{posts | json}}</pre>
+</details>

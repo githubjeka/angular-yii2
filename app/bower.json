@@ -9,6 +9,7 @@
         "angular-route": "*",
         "angular-ui-bootstrap": "*",
         "angular-strap": "*",
-        "bootstrap": "*"
+        "bootstrap": "*",
+        "AngularJS-Toaster": "*"
     }
 }

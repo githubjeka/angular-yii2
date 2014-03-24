@@ -10,6 +10,9 @@ class UserController extends ActiveController
     public $modelClass = 'app\models\User';
 
     public $authMethods = [
-        'yii\rest\HttpBasicAuth',
+//        'yii\rest\HttpBasicAuth',
+//        'yii\rest\QueryParamAuth',
+        'yii\rest\HttpBearerAuth',
     ];
+
 }

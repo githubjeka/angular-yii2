@@ -13,6 +13,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/AngularJS-Toaster/toaster.css">
 
 </head>
 <body ng-cloak="">
@@ -30,8 +31,8 @@
             <a class="navbar-brand" href="#">AppLogo</a>
         </div>
         <ul class="nav navbar-nav">
-            <li data-match-route="/?(navbar)?"><a href="">Home</a></li>
-            <li data-match-route="/page-one"><a href="">Post</a></li>
+            <li data-match-route="/?(navbar)?"><a href="./">Home</a></li>
+            <li><a href="post">Post</a></li>
         </ul>
     </div>
 </div>
@@ -41,13 +42,17 @@
     </div>
 </div>
 
+<toaster-container toaster-options="{'position-class': 'toast-top-right'}"></toaster-container>
+
 <script src="vendor/angular/angular.min.js"></script>
 <script src="vendor/angular-i18n/angular-locale_ru.js"></script>
 <script src="vendor/angular-route/angular-route.min.js"></script>
 <script src="vendor/angular-animate/angular-animate.min.js"></script>
 <script src="vendor/angular-strap/dist/angular-strap.min.js"></script>
+<script src="vendor/AngularJS-Toaster/toaster.js"></script>
 
 <script src="app.js"></script>
+<script src="modules/post/controllers/PostCtrl.js"></script>
 
 </body>
 </html>

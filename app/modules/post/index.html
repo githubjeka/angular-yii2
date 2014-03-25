@@ -1,8 +1,15 @@
-<div class="text-right">
-    <div class="form-group">
-        <label>Search: <input class="form-controll" type="text" ng-model="searchField"></label>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label>Search: <input class="form-controll" type="text" ng-model="searchField"></label>
+        </div>
+        <a href="post?expand=comments">show comments</a>
     </div>
-    <a href="post?expand=comments">show comments</a>
+
+    <div class="col-xs-6 text-right">
+        <a href="post/create" class="btn btn-success">Создать новый</a>
+    </div>
+
 </div>
 
 <section>

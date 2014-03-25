@@ -5,9 +5,8 @@
         "angular": "*",
         "angular-i18n": "*",
         "angular-animate": "*",
-        "ngAnimate-animate.css": "*",
         "angular-route": "*",
-        "angular-ui-bootstrap": "*",
+        "angular-sanitize": "*",
         "angular-strap": "*",
         "bootstrap": "*",
         "AngularJS-Toaster": "*"

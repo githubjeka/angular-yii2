@@ -19,4 +19,32 @@ app
             $scope.post = data;
         }).error(errorCallback);
 
+    }])
+    .controller('PostCreate', ['$scope', 'rest', 'toaster', '$sce', function ($scope, rest, toaster, $sce) {
+
+        $scope.post = {};
+
+        $scope.icons = [
+            {value: '1', label: 'Draft'},
+            {value: '2', label: 'Published'},
+            {value: '3', label: 'Archived'}
+        ];
+
+        var errorCallback = function (data) {
+            toaster.clear();
+            angular.forEach(data, function (error) {
+                toaster.pop('error', "Field: " + error.field, error.message);
+            });
+        };
+
+        $scope.save = function () {
+            rest.postModel($scope.post).success(function (data) {
+
+            }).error(errorCallback);
+        };
+
+        $scope.viewContent = function () {
+            return $sce.trustAsHtml($scope.post.content);
+        }
+
     }]);

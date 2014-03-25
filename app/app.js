@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'toaster', ]);
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'toaster','ngSanitize', 'mgcrea.ngStrap']);
 
 app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
 
@@ -13,6 +13,11 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
         .when('/post', {
             templateUrl: modulesPath + '/post/index.html',
             controller: 'PostIndex'
+        })
+
+        .when('/post/create', {
+            templateUrl: modulesPath + '/post/form.html',
+            controller: 'PostCreate'
         })
 
         .when('/post/:id', {
@@ -37,7 +42,7 @@ var url = '/test/yii2/rest/post';
 
 app.service('rest', function ($http, $location, $routeParams) {
 
-    return {
+   return {
 
         models: function () {
             return $http.get(url + location.search);
@@ -47,8 +52,8 @@ app.service('rest', function ($http, $location, $routeParams) {
             return $http.get(url + "/" + $routeParams.id + "?expand=comments");
         },
 
-        deleteModel: function (person) {
-            return $http.delete(url + person.Id);
+        postModel: function (model) {
+            return $http.post(url,model);
         },
         updateModel: function (person) {
             return $http.put(url + person.Id, person);

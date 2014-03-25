@@ -42,8 +42,9 @@
             "yii"
         ],
         "heroku": {
-            "document-root": "rest",
-            "index-document": "index.php"
+            "document-root": "/rest",
+            "index-document": "index.php",
+            "nginx-includes": ["etc/nginx.conf"]
         }
     }
 }

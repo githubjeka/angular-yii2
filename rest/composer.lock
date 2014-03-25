@@ -148,12 +148,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "30cc625c5c686f00af15a926f9437cb0e3fdff42"
+                "reference": "d74aee409342d086ae6b087ea6dc3e71f6da055c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/30cc625c5c686f00af15a926f9437cb0e3fdff42",
-                "reference": "30cc625c5c686f00af15a926f9437cb0e3fdff42",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/d74aee409342d086ae6b087ea6dc3e71f6da055c",
+                "reference": "d74aee409342d086ae6b087ea6dc3e71f6da055c",
                 "shasum": ""
             },
             "type": "library",
@@ -188,7 +188,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-03-23 06:13:38"
+            "time": "2014-03-24 07:30:44"
         },
         {
             "name": "yiisoft/jquery",
@@ -245,12 +245,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "9a85668bbfcaf5efb47c6d54b01d7927d84de45e"
+                "reference": "52bdd54e80af936aff248d27fbe36f59215bb572"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/9a85668bbfcaf5efb47c6d54b01d7927d84de45e",
-                "reference": "9a85668bbfcaf5efb47c6d54b01d7927d84de45e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/52bdd54e80af936aff248d27fbe36f59215bb572",
+                "reference": "52bdd54e80af936aff248d27fbe36f59215bb572",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2014-03-23 22:47:18"
+            "time": "2014-03-25 09:56:57"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -412,12 +412,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "c6f3e18a6572f6d31db5c31cf5a03aed286ea8fa"
+                "reference": "cf9be2759a785d943c71cf49334db79b2bc7fcd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/c6f3e18a6572f6d31db5c31cf5a03aed286ea8fa",
-                "reference": "c6f3e18a6572f6d31db5c31cf5a03aed286ea8fa",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/cf9be2759a785d943c71cf49334db79b2bc7fcd7",
+                "reference": "cf9be2759a785d943c71cf49334db79b2bc7fcd7",
                 "shasum": ""
             },
             "require": {
@@ -448,7 +448,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2014-03-23 00:17:31"
+            "time": "2014-03-24 22:26:30"
         },
         {
             "name": "yiisoft/yii2-gii",
@@ -456,12 +456,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-gii.git",
-                "reference": "aa4714df16efa48a371459146d550e8dcd5ca7cb"
+                "reference": "9d48ce9aa5f6a01ae5159fa2bb817c2e86f17f42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/aa4714df16efa48a371459146d550e8dcd5ca7cb",
-                "reference": "aa4714df16efa48a371459146d550e8dcd5ca7cb",
+                "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/9d48ce9aa5f6a01ae5159fa2bb817c2e86f17f42",
+                "reference": "9d48ce9aa5f6a01ae5159fa2bb817c2e86f17f42",
                 "shasum": ""
             },
             "require": {
@@ -493,7 +493,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2014-03-21 17:43:26"
+            "time": "2014-03-24 12:28:22"
         }
     ],
     "packages-dev": [

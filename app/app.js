@@ -10,6 +10,10 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
             templateUrl: modulesPath + '/site/views/main.html'
         })
 
+        .when('/login', {
+            templateUrl: modulesPath + '/site/views/login.html'
+        })
+
         .when('/post', {
             templateUrl: modulesPath + '/post/index.html',
             controller: 'PostIndex'

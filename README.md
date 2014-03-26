@@ -12,3 +12,5 @@ bower update
 cd ../rest
 composer install --prefer-dist
 ```
+
+SQL DB - rest/sql.txt

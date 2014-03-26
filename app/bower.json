@@ -6,6 +6,8 @@
         "angular-i18n": "*",
         "angular-animate": "*",
         "angular-route": "*",
+        "angular-strap": "2.0.0-rc.4",
+        "angular-motion": "*",
         "angular-cookies": "*",
         "angular-sanitize": "*",
         "bootstrap": "*",

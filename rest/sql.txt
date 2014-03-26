@@ -7,15 +7,27 @@ CREATE TABLE tbl_lookup
         position INTEGER NOT NULL
 );
 
-CREATE TABLE tbl_user
-(
-        id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        username VARCHAR(128) NOT NULL,
-        password VARCHAR(128) NOT NULL,
-        salt VARCHAR(128) NOT NULL,
-        email VARCHAR(128) NOT NULL,
-        profile TEXT
-);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_user`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `authKey` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `profile` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `tbl_user`
+--
+
 
 CREATE TABLE tbl_post
 (
@@ -58,7 +70,9 @@ INSERT INTO tbl_lookup (name, type, code, position) VALUES ('Archived', 'PostSta
 INSERT INTO tbl_lookup (name, type, code, position) VALUES ('Pending Approval', 'CommentStatus', 1, 1);
 INSERT INTO tbl_lookup (name, type, code, position) VALUES ('Approved', 'CommentStatus', 2, 2);
 
-INSERT INTO tbl_user (username, password, salt, email) VALUES ('demo','2e5c7db760a33498023813489cfadc0b','28b206548469ce62182048fd9cf91760','webmaster@example.com');
+INSERT INTO `tbl_user` (`id`, `username`, `password`, `authKey`, `email`, `profile`) VALUES
+(1, 'demo', '$2y$10$LKDsAfxxLDyU0ti7RfayT.oG/5a5NXZkkg9/AdVbaTr0E/VtjJje.', '$2y$10$LKDsAfxxLDyU0ti7RfayT.oG/5a5NXZkkg9/AdVbaTr0E/VtjJje.', 'webmaster@example.com', NULL);
+
 INSERT INTO tbl_post (title, content, status, create_time, update_time, author_id, tags) VALUES ('Welcome!','This blog system is developed using Yii. It is meant to demonstrate how to use Yii to build a complete real-world application. Complete source code may be found in the Yii releases.
 
 Feel free to try this system by writing new posts and posting comments.',2,1230952187,1230952187,1,'yii, blog');

@@ -14,7 +14,7 @@
 
 <section>
 
-    <div ng-repeat="post in posts | filter:searchField">
+    <div ng-repeat="post in posts | filter:searchField" class="am-fade">
         <h1><a ng-href="post/{{post.id}}">{{post.title}}</a></h1>
         <article>
             {{post.content}}

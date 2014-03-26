@@ -1,5 +1,8 @@
 app
     .controller('PostIndex', ['$scope', 'rest', 'toaster', function ($scope, rest, toaster) {
+
+        rest.url = '/test/yii2/rest/post';
+
         var errorCallback = function (data) {
             toaster.clear();
             toaster.pop('error', "status: " + data.status + " " + data.name, data.message);
@@ -10,7 +13,10 @@ app
         }).error(errorCallback);
 
     }])
+
     .controller('PostView', ['$scope', 'rest', 'toaster', function ($scope, rest, toaster) {
+
+        rest.url = '/test/yii2/rest/post';
 
         var errorCallback = function (data) {
             toaster.pop('error', "code: " + data.code + " " + data.name, data.message);
@@ -21,7 +27,10 @@ app
         }).error(errorCallback);
 
     }])
+
     .controller('PostCreate', ['$scope', 'rest', 'toaster', '$sce', function ($scope, rest, toaster, $sce) {
+
+        rest.url = '/test/yii2/rest/post';
 
         $scope.post = {};
 

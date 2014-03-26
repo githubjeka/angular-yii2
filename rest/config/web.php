@@ -44,6 +44,8 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
+                'GET user/login' => 'user/login',
+                'POST user/login' => 'user/login',
                 'GET <controller:\w+>' => '<controller>/index',
                 'GET <controller:\w+>/<id:\d+>' => '<controller>/view',
                 'POST <controller:\w+>' => '<controller>/create',

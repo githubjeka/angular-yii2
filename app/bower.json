@@ -6,8 +6,8 @@
         "angular-i18n": "*",
         "angular-animate": "*",
         "angular-route": "*",
+        "angular-cookies": "*",
         "angular-sanitize": "*",
-        "angular-strap": "*",
         "bootstrap": "*",
         "AngularJS-Toaster": "*"
     }

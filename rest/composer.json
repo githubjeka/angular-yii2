@@ -18,7 +18,8 @@
         "yiisoft/jquery": "~1.10",
 		"yiisoft/yii2": "*",
         "yiisoft/yii2-debug": "*",
-        "yiisoft/yii2-gii": "*"
+        "yiisoft/yii2-gii": "*",
+        "ircmaxell/password-compat": "dev-master"
 	},
 	"suggest": {
 		"codeception/codeception": "Codeception, 1.8.*@dev is currently works well with Yii.",

@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'toaster','ngSanitize', 'mgcrea.ngStrap']);
+var app = angular.module('myApp', ['ngRoute', 'ngCookies', 'ngAnimate', 'toaster', 'ngSanitize', 'mgcrea.ngStrap']);
 
 app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
 
@@ -11,21 +11,22 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
         })
 
         .when('/login', {
-            templateUrl: modulesPath + '/site/views/login.html'
+            templateUrl: modulesPath + '/site/views/login.html',
+            controller: 'SiteLogin'
         })
 
         .when('/post', {
-            templateUrl: modulesPath + '/post/index.html',
+            templateUrl: modulesPath + '/post/views/index.html',
             controller: 'PostIndex'
         })
 
         .when('/post/create', {
-            templateUrl: modulesPath + '/post/form.html',
+            templateUrl: modulesPath + '/post/views/form.html',
             controller: 'PostCreate'
         })
 
         .when('/post/:id', {
-            templateUrl: modulesPath + '/post/view.html',
+            templateUrl: modulesPath + '/post/views/view.html',
             controller: 'PostView'
         })
 
@@ -42,25 +43,30 @@ app.config(['$locationProvider', '$routeProvider', function ($locationProvider, 
 
 app.value('app-version', '0.1');
 
-var url = '/test/yii2/rest/post';
+// Need set url REST Api in controller!
+app.service('rest', function ($http, $location, $routeParams, $cookies) {
 
-app.service('rest', function ($http, $location, $routeParams) {
+    return {
 
-   return {
+        url: undefined,
+
+        config: {headers: {'Authorization': 'Basic ' + $cookies._auth}},
 
         models: function () {
-            return $http.get(url + location.search);
+            return $http.get(this.url + location.search, this.config);
         },
 
         model: function () {
-            return $http.get(url + "/" + $routeParams.id + "?expand=comments");
+            return $http.get(this.url + "/" + $routeParams.id + "?expand=comments", this.config);
         },
 
         postModel: function (model) {
-            return $http.post(url,model);
+            return $http.post(this.url, model, this.config);
         },
+
         updateModel: function (person) {
             return $http.put(url + person.Id, person);
         }
     };
+
 });

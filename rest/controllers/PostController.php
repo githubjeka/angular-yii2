@@ -15,6 +15,6 @@ class PostController extends ActiveController
     }
 
     public $authMethods = [
-//        'yii\rest\HttpBearerAuth',
+        'yii\rest\HttpBasicAuth',
     ];
 }

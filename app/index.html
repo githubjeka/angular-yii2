@@ -13,10 +13,15 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/angular-strap/angular-motion.min.css">
     <link rel="stylesheet" href="vendor/AngularJS-Toaster/toaster.css">
-
+<style>
+    .view-animate-container {
+        position:relative;
+    }
+</style>
 </head>
-<body ng-cloak="">
+<body>
 
 <!--[if lte IE 9]>
 <p class="browsehappy">
@@ -37,8 +42,8 @@
     </div>
 </div>
 
-<div class="container">
-    <div ng-view>
+<div class="container view-animate-container">
+    <div ng-view class="am-fade-and-slide-top">
     </div>
 </div>
 
@@ -47,14 +52,16 @@
 <script src="vendor/angular/angular.min.js"></script>
 <script src="vendor/angular-i18n/angular-locale_ru.js"></script>
 <script src="vendor/angular-route/angular-route.min.js"></script>
+<script src="vendor/angular-cookies/angular-cookies.min.js"></script>
 <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
 <script src="vendor/angular-animate/angular-animate.min.js"></script>
-<script src="vendor/angular-strap/dist/angular-strap.min.js"></script>
-<script src="vendor/angular-strap/dist/angular-strap.tpl.min.js"></script>
 <script src="vendor/AngularJS-Toaster/toaster.js"></script>
+<script src="vendor/angular-strap/strap.js"></script>
+<script src="vendor/angular-strap/strap.tpl.js"></script>
 
 <script src="app.js"></script>
 <script src="modules/post/controllers/PostCtrl.js"></script>
+<script src="modules/site/controllers/SiteCtrl.js"></script>
 
 </body>
 </html>

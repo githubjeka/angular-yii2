@@ -1,5 +1,5 @@
 app
-    .controller('SiteLogin', ['$scope', 'rest', 'toaster','$cookies', function ($scope, rest, toaster, $cookies) {
+    .controller('SiteLogin', ['$scope', 'rest', 'toaster', '$cookies', function ($scope, rest, toaster, $cookies) {
 
         rest.url = '/test/yii2/rest/user/login';
 
@@ -12,6 +12,7 @@ app
 
         $scope.login = function () {
             rest.postModel($scope.model).success(function (data) {
+                console.log(data);
                 rest.config.headers.Authorization = 'Basic ' + data;
                 $cookies._auth = data;
             }).error(errorCallback);

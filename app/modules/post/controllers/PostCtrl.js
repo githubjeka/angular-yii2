@@ -42,9 +42,13 @@ app
 
         var errorCallback = function (data) {
             toaster.clear();
-            angular.forEach(data, function (error) {
-                toaster.pop('error', "Field: " + error.field, error.message);
-            });
+            if (data.status == undefined) {
+                angular.forEach(data, function (error) {
+                    toaster.pop('error', "Field: " + error.field, error.message);
+                });
+            } else {
+                toaster.pop('error', "status: " + data.status + " " + data.name, data.message);
+            }
         };
 
         $scope.save = function () {

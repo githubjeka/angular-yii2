@@ -2,6 +2,7 @@
 namespace app\controllers;
 
 use app\models\LoginForm;
+use yii\base\ErrorHandler;
 use yii\rest\ActiveController;
 use Yii;
 
@@ -19,17 +20,17 @@ class UserController extends ActiveController
 
     public function actionLogin()
     {
-        if (!\Yii::$app->user->isGuest) {
-            return Yii::$app->user->identity->token;
+        if (\Yii::$app->user->isGuest) {
+
+            $model = new LoginForm();
+
+            if (!$model->load(Yii::$app->getRequest()->getBodyParams(), '') || !$model->login()) {
+                $model->validate();
+                return $model;
+            }
         }
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->getRequest()->getBodyParams(), '') && $model->login()) {
-            return Yii::$app->user->identity->token;
-        } else {
-            $model->validate();
-            return $model;
-        }
+        echo Yii::$app->user->identity->token;
     }
 
     public function actionLogout()

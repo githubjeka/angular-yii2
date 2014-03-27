@@ -24,16 +24,16 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
-                [
+                'file' => [
                     'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
+                    'levels' => ['trace', 'info'],
+                    'categories' => ['yii\*'],
                 ],
             ],
         ],
         'request' => [
-            'class'=>'\yii\web\Request',
+            'class' => '\yii\web\Request',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
             ]

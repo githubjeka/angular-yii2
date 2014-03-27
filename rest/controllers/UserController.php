@@ -5,18 +5,11 @@ use app\models\LoginForm;
 use yii\base\ErrorHandler;
 use yii\rest\ActiveController;
 use Yii;
+use yii\web\Cookie;
 
 class UserController extends ActiveController
 {
-//    public $supportedVersions = ['1.0','2.0'];
-//
     public $modelClass = 'app\models\User';
-
-    public $authMethods = [
-//        'yii\rest\HttpBasicAuth',
-//        'yii\rest\QueryParamAuth',
-//        'yii\rest\HttpBearerAuth',
-    ];
 
     public function actionLogin()
     {
@@ -29,6 +22,8 @@ class UserController extends ActiveController
                 return $model;
             }
         }
+
+        Yii::$app->request->getCsrfToken();
 
         echo Yii::$app->user->identity->token;
     }

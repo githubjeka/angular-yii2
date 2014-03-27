@@ -7,6 +7,8 @@ class PostController extends ActiveController
 {
     public $modelClass = 'app\models\Post';
 
+    public $enableCsrfValidation = true;
+
     public function actions()
     {
         $actions = parent::actions();

@@ -1,10 +1,11 @@
 app
-    .controller('SiteLogin', ['$scope', 'rest', 'toaster', '$cookies', function ($scope, rest, toaster, $cookies) {
+    .controller('SiteLogin', ['$scope', 'rest', 'toaster', '$window', function ($scope, rest, toaster, $window) {
 
         rest.url = '/test/yii2/rest/user/login';
 
         var errorCallback = function (data) {
             toaster.clear();
+            delete $window.sessionStorage._auth;
             angular.forEach(data, function (error) {
                 toaster.pop('error', "Field: " + error.field, error.message);
             });
@@ -12,12 +13,8 @@ app
 
         $scope.login = function () {
             rest.postModel($scope.model).success(function (data) {
-                console.log(data);
-                rest.config.headers.Authorization = 'Basic ' + data;
-                $cookies._auth = data;
+                $window.sessionStorage._auth = data;
             }).error(errorCallback);
-
-            console.log(rest);
         }
 
     }]);

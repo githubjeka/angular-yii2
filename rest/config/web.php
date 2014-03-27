@@ -14,7 +14,6 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -36,7 +35,8 @@ $config = [
             'class' => '\yii\web\Request',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
-            ]
+            ],
+            'enableCsrfValidation' => true,
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,

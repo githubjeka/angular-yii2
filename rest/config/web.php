@@ -58,14 +58,4 @@ $config = [
     'params' => $params,
 ];
 
-if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
-    $config['preload'][] = 'debug';
-    $config['modules']['debug'] = 'yii\debug\Module';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        'allowedIPs' => ['10.178.4.15']
-    ];
-}
-
 return $config;

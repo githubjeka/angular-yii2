@@ -14,7 +14,13 @@
 
 <section>
 
-    <div ng-repeat="post in posts | filter:searchField" class="am-fade">
+    <div ng-repeat="post in posts | filter:searchField" class="am-fade" ng-mouseover="menuShow=true"
+         ng-mouseout="menuShow=false">
+        <div class="btn-group pull-right" ng-show="menuShow">
+            <a class="btn btn-primary" ng-href="post/{{post.id}}/edit"><span
+                    class="glyphicon glyphicon-edit"></span></a>
+            <a class="btn btn-danger" ng-href="post/{{post.id}}/delete"><span class="glyphicon glyphicon-remove"></span></a>
+        </div>
         <h1><a ng-href="post/{{post.id}}">{{post.title}}</a></h1>
         <article>
             {{post.content}}

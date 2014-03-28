@@ -1,18 +1,18 @@
 <div class="row">
     <div class="col-xs-6">
         <form class="form-horizontal" role="form">
+
             <div class="form-group">
-                <label>Title post
-                    <input type="text" class="form-control" ng-model="post.title" placeholder="Enter title"
-                           maxlength="128">
-                </label>
+                <label>Title post </label>
+                <input type="text" class="form-control" ng-model="post.title" placeholder="Enter title"
+                       maxlength="128">
+
             </div>
 
             <div class="form-group">
-                <label>Content post
-                    <textarea ng-model="post.content" class="form-control" placeholder="Enter content" rows="6"
-                              maxlength="255"></textarea>
-                </label>
+                <label>Content post</label>
+                <textarea ng-model="post.content" class="form-control" placeholder="Enter content" rows="6"
+                          maxlength="500"></textarea>
             </div>
 
             <label>Select status:&nbsp;</label>
@@ -22,7 +22,13 @@
                 Action <span class="caret"></span>
             </button>
 
-            <button type="button" ng-click="save()" class="btn btn-default">Submit</button>
+            <hr>
+
+            <div class="btn-group">
+                <button type="submit" ng-click="save()" class="btn btn-success">Submit</button>
+                <a href="post" class="btn btn-default">Cancel</a>
+            </div>
+
         </form>
     </div>
     <div class="col-xs-6">

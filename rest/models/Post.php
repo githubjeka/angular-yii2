@@ -2,6 +2,8 @@
 
 namespace app\models;
 
+use yii\base\Exception;
+
 /**
  * This is the model class for table "tbl_post".
  *
@@ -30,9 +32,9 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'content', 'status', 'author_id'], 'required'],
+            [['title', 'content', 'status'], 'required'],
             [['content', 'tags'], 'string'],
-            [['status', 'create_time', 'update_time', 'author_id'], 'integer'],
+            [['status', 'create_time', 'update_time'], 'integer'],
             [['title'], 'string', 'max' => 128]
         ];
     }
@@ -51,6 +53,7 @@ class Post extends \yii\db\ActiveRecord
             'title',
             'content',
             'tags',
+            'status',
             'author'
         ];
     }
@@ -70,6 +73,22 @@ class Post extends \yii\db\ActiveRecord
             'update_time' => 'Update Time',
             'author_id' => 'Author ID',
         ];
+    }
+
+    public function beforeSave($insert)
+    {
+        if (parent::beforeSave($insert)) {
+
+            if (\Yii::$app->user->isGuest)
+                throw new Exception ('User is Guest');
+
+            $this->author_id = (int)\Yii::$app->user->id;
+
+            return true;
+
+        } else {
+            return false;
+        }
     }
 
     public function getComments()

@@ -25,6 +25,16 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', function ($l
             controller: 'PostCreate'
         })
 
+        .when('/post/:id/edit', {
+            templateUrl: modulesPath + '/post/views/form.html',
+            controller: 'PostEdit'
+        })
+
+        .when('/post/:id/delete', {
+            templateUrl: modulesPath + '/post/views/delete.html',
+            controller: 'PostDelete'
+        })
+
         .when('/post/:id', {
             templateUrl: modulesPath + '/post/views/view.html',
             controller: 'PostView'
@@ -79,8 +89,12 @@ app.service('rest', function ($http, $location, $routeParams) {
             return $http.post(this.url, model);
         },
 
-        updateModel: function (person) {
-            return $http.put(url + person.Id, person);
+        putModel: function (model) {
+            return $http.put(this.url + "/" + $routeParams.id, model);
+        },
+
+        deleteModel: function (model) {
+            return $http.delete(this.url + "/" + $routeParams.id, model);
         }
     };
 

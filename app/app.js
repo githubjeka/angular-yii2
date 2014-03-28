@@ -113,7 +113,7 @@ app.directive('login', ['$http', function ($http) {
         transclude: true,
         link: function (scope, element, attrs) {
             if (window.sessionStorage._auth != undefined) {
-                $http.get('/test/yii2/rest/user').success(
+                $http.get('http://rest-yii2.herokuapp.com/user').success(
                     function (data) {
                         scope.username = data[0].username;
                     }

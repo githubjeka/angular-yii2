@@ -1,7 +1,7 @@
 app
     .controller('SiteLogin', ['$scope', 'rest', 'toaster', '$window', function ($scope, rest, toaster, $window) {
 
-        rest.url = '/test/yii2/rest/user/login';
+        rest.url = 'https://rest-yii2.herokuapp.com/user/login';
 
         var errorCallback = function (data) {
             toaster.clear();
@@ -28,7 +28,7 @@ app
     }])
     .controller('SiteLogout', ['$scope', 'rest', '$window', function ($scope, rest, $window) {
 
-        rest.url = '/test/yii2/rest/user/logout';
+        rest.url = 'http://rest-yii2.herokuapp.com/user/logout';
 
         var errorCallback = function (data) {
             console.log(data);

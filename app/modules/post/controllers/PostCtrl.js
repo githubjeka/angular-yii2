@@ -1,7 +1,7 @@
 app
     .controller('PostIndex', ['$scope', 'rest', 'toaster', function ($scope, rest, toaster) {
 
-        rest.url = '/test/yii2/rest/post';
+        rest.url = 'http://rest-yii2.herokuapp.com/post';
 
         var errorCallback = function (data) {
             toaster.clear();
@@ -16,7 +16,7 @@ app
 
     .controller('PostView', ['$scope', 'rest', 'toaster', function ($scope, rest, toaster) {
 
-        rest.url = '/test/yii2/rest/post';
+        rest.url = 'http://rest-yii2.herokuapp.com/post';
 
         var errorCallback = function (data) {
             toaster.pop('error', "code: " + data.code + " " + data.name, data.message);
@@ -30,7 +30,7 @@ app
 
     .controller('PostCreate', ['$scope', 'rest', 'toaster', '$sce', function ($scope, rest, toaster, $sce) {
 
-        rest.url = '/test/yii2/rest/post';
+        rest.url = 'http://rest-yii2.herokuapp.com/post';
 
         $scope.post = {};
 
@@ -82,7 +82,7 @@ app
             }
         };
 
-        rest.url = '/test/yii2/rest/post';
+        rest.url = 'http://rest-yii2.herokuapp.com/post';
 
         $scope.post = {};
 
@@ -129,7 +129,7 @@ app
             }
         };
 
-        rest.url = '/test/yii2/rest/post';
+        rest.url = 'http://rest-yii2.herokuapp.com/post';
 
         rest.model().success(function (data) {
             $scope.post = data;

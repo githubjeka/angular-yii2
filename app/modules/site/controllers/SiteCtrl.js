@@ -14,7 +14,30 @@ app
         $scope.login = function () {
             rest.postModel($scope.model).success(function (data) {
                 $window.sessionStorage._auth = data;
+                toaster.pop('success', "Success");
+                window.setTimeout(function () {
+                    document.location = '';
+                }, 1000);
             }).error(errorCallback);
-        }
+        };
+
+        rest.postModel($scope.model).success(function (data) {
+            $window.sessionStorage._auth = data;
+            document.location = '';
+        });
+    }])
+    .controller('SiteLogout', ['$scope', 'rest', '$window', function ($scope, rest, $window) {
+
+        rest.url = '/test/yii2/rest/user/logout';
+
+        var errorCallback = function (data) {
+            console.log(data);
+        };
+
+        rest.get().success(function () {
+            delete $window.sessionStorage._auth;
+            document.location = '';
+        }).error(errorCallback);
+
 
     }]);

@@ -14,6 +14,10 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', function ($l
             templateUrl: modulesPath + '/site/views/login.html',
             controller: 'SiteLogin'
         })
+        .when('/logout', {
+            templateUrl: modulesPath + '/site/views/main.html',
+            controller: 'SiteLogout'
+        })
 
         .when('/post', {
             templateUrl: modulesPath + '/post/views/index.html',
@@ -85,6 +89,10 @@ app.service('rest', function ($http, $location, $routeParams) {
             return $http.get(this.url + "/" + $routeParams.id + "?expand=comments");
         },
 
+        get: function () {
+            return $http.get(this.url);
+        },
+
         postModel: function (model) {
             return $http.post(this.url, model);
         },
@@ -99,3 +107,20 @@ app.service('rest', function ($http, $location, $routeParams) {
     };
 
 });
+
+app.directive('login', ['$http', function ($http) {
+    return {
+        transclude: true,
+        link: function (scope, element, attrs) {
+            if (window.sessionStorage._auth != undefined) {
+                $http.get('/test/yii2/rest/user').success(
+                    function (data) {
+                        scope.username = data[0].username;
+                    }
+                );
+            }
+        },
+
+        template: '<a href="login" ng-if="!username">Login</a><a href="logout" ng-if="username">Logout ({{username}})</a>'
+    }
+}]);

@@ -12,16 +12,17 @@
     <title>Angular App</title>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="vendor/angular/angular-csp.css">
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendor/angular-motion/dist/angular-motion.min.css">
     <link rel="stylesheet" href="vendor/AngularJS-Toaster/toaster.css">
-<style>
-    .view-animate-container {
-        position:relative;
-    }
-</style>
+    <style>
+        .view-animate-container {
+            position: relative;
+        }
+    </style>
 </head>
-<body>
+<body class="ng-cloak">
 
 <!--[if lte IE 9]>
 <p class="browsehappy">
@@ -37,7 +38,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li data-match-route="post"><a href="post">Post</a></li>
-            <li class="pull-right" data-match-route="login"><a href="login">Login</a></li>
+            <li login></li>
         </ul>
     </div>
 </div>
@@ -46,7 +47,6 @@
     <div ng-view class="am-fade-and-slide-top">
     </div>
 </div>
-
 <toaster-container toaster-options="{'position-class': 'toast-top-right'}"></toaster-container>
 
 <script src="vendor/angular/angular.js"></script>

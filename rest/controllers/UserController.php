@@ -2,10 +2,8 @@
 namespace app\controllers;
 
 use app\models\LoginForm;
-use yii\base\ErrorHandler;
 use yii\rest\ActiveController;
 use Yii;
-use yii\web\Cookie;
 
 class UserController extends ActiveController
 {
@@ -29,7 +27,14 @@ class UserController extends ActiveController
     public function actionLogout()
     {
         Yii::$app->user->logout();
-        return $this->goHome();
+    }
+
+    public function actionIndex()
+    {
+        if (Yii::$app->user->isGuest) {
+            throw new \HttpHeaderException();
+        }
+        return Yii::$app->user->getId();
     }
 
 }

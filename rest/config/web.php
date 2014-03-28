@@ -50,6 +50,7 @@ $config = [
                 'POST user/login' => 'user/login',
 
                 'OPTIONS <controller:\w+>' => '<controller>/options',
+                'OPTIONS <controller:\w+>/<id:\d+>' => '<controller>/options',
                 'GET <controller:\w+>' => '<controller>/index',
                 'GET <controller:\w+>/<id:\d+>' => '<controller>/view',
                 'POST <controller:\w+>' => '<controller>/create',

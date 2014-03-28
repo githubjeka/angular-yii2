@@ -39,8 +39,6 @@ app.config(['$locationProvider', '$routeProvider', '$httpProvider', function ($l
 
     $locationProvider.html5Mode(true).hashPrefix('!');
     $httpProvider.interceptors.push('authInterceptor');
-    $httpProvider.defaults.xsrfCookieName = '_csrf';
-    $httpProvider.defaults.xsrfHeaderName = 'X-CSRF-Token';
 }]);
 
 app.factory('authInterceptor', function ($q, $window) {

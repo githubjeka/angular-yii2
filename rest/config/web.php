@@ -36,7 +36,6 @@ $config = [
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
             ],
-            'enableCsrfValidation' => true,
         ],
         'urlManager' => [
             'enablePrettyUrl' => true,

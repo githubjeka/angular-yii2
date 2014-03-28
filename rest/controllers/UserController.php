@@ -23,8 +23,6 @@ class UserController extends ActiveController
             }
         }
 
-        Yii::$app->request->getCsrfToken();
-
         echo Yii::$app->user->identity->token;
     }
 

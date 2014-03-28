@@ -94,6 +94,7 @@ app
 
         rest.model().success(function (data) {
             $scope.post = data;
+            $scope.post.status = $scope.post.status.toString();
         }).error(errorCallback);
 
         $scope.save = function () {

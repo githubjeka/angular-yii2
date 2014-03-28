@@ -16,8 +16,7 @@
             </div>
 
             <label>Select status:&nbsp;</label>
-            <button type="button" class="btn btn-default" ng-model="post.status" data-html="1"
-                    data-animation="am-flip-x"
+            <button type="button" class="btn btn-default" ng-model="post.status" data-animation="am-flip-x"
                     ng-options="icon.value as icon.label for icon in icons" bs-select>
                 Action <span class="caret"></span>
             </button>
@@ -37,3 +36,8 @@
         <div ng-bind-html="viewContent()"></div>
     </div>
 </div>
+<hr>
+<details>
+    <summary>JSON DATA</summary>
+    <pre>{{post | json}}</pre>
+</details>

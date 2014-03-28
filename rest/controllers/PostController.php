@@ -17,4 +17,16 @@ class PostController extends ActiveController
     public $authMethods = [
         'yii\rest\HttpBasicAuth',
     ];
+
+    /**
+     * @inheritdoc
+     */
+    protected function authenticate($action)
+    {
+        if (empty($this->authMethods) || $action->id == "options") {
+            return;
+        }
+
+        parent::authenticate($action);
+    }
 }

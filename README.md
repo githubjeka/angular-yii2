@@ -1,6 +1,9 @@
-### Test app yii2 rest Api and angular client side
+## Test app yii2 rest Api and angular client side
 
-Install:
+Demo Client - [http://angularyii2.github.io/](http://angularyii2.github.io/)
+
+**Install for local:**
+
 Download and run cmd:
 
 ```

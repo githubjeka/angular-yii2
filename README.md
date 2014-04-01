@@ -6,14 +6,21 @@ Demo Client - [http://angularyii2.github.io/](http://angularyii2.github.io/)
 
 Download and run cmd:
 
+Init client app
 ```
 cd app
 bower update
 ```
 
+Init server
 ```
 cd ../rest
 composer install --prefer-dist
 ```
 
+Change config \rest\config\db.php
 SQL DB - rest/sql.txt
+
+**More**
+Folder rest - server-side on Yii2
+Folder app - client application build with AngularJS

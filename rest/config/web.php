@@ -45,6 +45,7 @@ $config = [
                 ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
 
                 'OPTIONS user/login' => 'user/options',
+                'OPTIONS user/logout' => 'user/options',
                 'GET user/login' => 'user/login',
                 'GET user/logout' => 'user/logout',
                 'POST user/login' => 'user/login',

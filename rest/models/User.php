@@ -64,7 +64,7 @@ class User extends ActiveRecord implements IdentityInterface
     /**
      * @inheritdoc
      */
-    public static function findIdentityByAccessToken($token)
+    public static function findIdentityByAccessToken($token, $type = null)
     {
         $user = self::find()->where(['authKey' => $token])->one();
         if ($user) {
@@ -160,6 +160,6 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function validatePassword($password)
     {
-        return password_verify($password,$this->password);
+        return password_verify($password, $this->password);
     }
 }

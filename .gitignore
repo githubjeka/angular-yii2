@@ -24,14 +24,8 @@ nbproject
 switch
 index
 
-# configuration files created locally by post deployment script or by a developer
-*main-local.php
-*params-local.php
-
 # composer itself is not needed
 composer.phar
-# composer.lock should not be committed as we always want the latest versions
-*composer.lock
 
 # phpunit itself is not needed
 phpunit.phar

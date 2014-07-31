@@ -1,0 +1,6 @@
+[submodule "rest"]
+	path = rest
+	url = https://github.com/githubjeka/yii2-rest
+[submodule "client-angular"]
+	path = client-angular
+	url = https://github.com/AngularYii2/angularyii2.github.io

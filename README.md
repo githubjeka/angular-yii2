@@ -2,25 +2,14 @@
 
 Demo Client - [http://angularyii2.github.io/](http://angularyii2.github.io/)
 
-**Install for local:**
+Demo Server - [http://angular-yii2.tk/](http://angular-yii2.tk/)
 
-Download and run cmd:
-
-Init client app
+###Init client###
+Download source from https://github.com/AngularYii2/angularyii2.github.io
 ```
 cd app
 bower update
 ```
 
-Init server
-```
-cd ../rest
-composer install --prefer-dist
-```
-
-Change config \rest\config\db.php
-SQL DB - rest/sql.txt
-
-**More**
-Folder rest - server-side on Yii2
-Folder app - client application build with AngularJS
+###Init server:###
+See https://github.com/githubjeka/yii2-rest/blob/master/README.md

@@ -14,6 +14,7 @@ $ bower update
 ```
 
 ###Init server:###
+[![Build Status](https://travis-ci.org/githubjeka/yii2-rest.svg)](https://travis-ci.org/githubjeka/yii2-rest)
 ```
 $ cd rest
 $ composer install --prefer-dist

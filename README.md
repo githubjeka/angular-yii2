@@ -32,5 +32,5 @@ See more info https://github.com/githubjeka/yii2-rest/blob/master/README.md
 
 Demo Client - [http://angularyii2.github.io/](http://angularyii2.github.io/)
 
-Demo Server - [http://angular-yii2.tk/](http://angular-yii2.tk/)
+Demo Server - [https://yii2-rest-githubjeka.c9.io/rest/web/](https://yii2-rest-githubjeka.c9.io/rest/web/)
 

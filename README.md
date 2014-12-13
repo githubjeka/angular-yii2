@@ -21,7 +21,7 @@ $ composer install --prefer-dist
 ```
 Create a new database and adjust the components['db'] configuration in environments/dev/common/config/main-local.php accordingly.
 ```
-$ php yii init
+$ php init
 $ php yii migrate
 ```
 

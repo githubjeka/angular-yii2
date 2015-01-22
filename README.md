@@ -13,6 +13,8 @@ $ cd client-angular
 $ bower update
 ```
 
+See more info https://github.com/AngularYii2/angularyii2.github.io
+
 ###Init server:###
 [![Build Status](https://travis-ci.org/githubjeka/yii2-rest.svg)](https://travis-ci.org/githubjeka/yii2-rest)
 ```

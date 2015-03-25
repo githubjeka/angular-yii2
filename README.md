@@ -36,7 +36,7 @@ Demo Client - [http://angularyii2.github.io/](http://angularyii2.github.io/)
 
 Demo Server - [https://yii2-rest-githubjeka.c9.io/rest/web/](https://yii2-rest-githubjeka.c9.io/rest/web/)
 
-Not Found (#404) is OK, because 
+Not Found (#404) is OK, because rules is
 ```php
 [
 'urlManager' => [
@@ -45,8 +45,7 @@ Not Found (#404) is OK, because
             'showScriptName' => false,
             'rules' => [
                 ['class' => 'yii\rest\UrlRule', 'controller' => ['v1/post', 'v1/comment', 'v2/post']],
-                'OPTIONS v1/user/login' => 'v1/user/login',
-                'POST v1/user/login' => 'v1/user/login',
+                'v1/user/login' => 'v1/user/login',
                 'POST v2/user/login' => 'v2/user/login',
                 'OPTIONS v2/user/login' => 'v2/user/login',
             ],

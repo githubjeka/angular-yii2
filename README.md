@@ -16,7 +16,7 @@ $ bower update
 See more info https://github.com/AngularYii2/angularyii2.github.io
 
 ###Init server:###
-[on GitHub](https://github.com/githubjeka/yii2-rest)
+
 [![Build Status](https://travis-ci.org/githubjeka/yii2-rest.svg)](https://travis-ci.org/githubjeka/yii2-rest)
 
 ```
@@ -24,11 +24,7 @@ $ cd rest
 $ composer install --prefer-dist
 ```
 
-Create a new database and adjust the components['db'] configuration in environments/dev/common/config/main-local.php accordingly.
-```
-$ php init
-$ php yii migrate
-```
+For more information by init rest server please see description of [yii2-rest repository](https://github.com/githubjeka/yii2-rest)
 
 ## Test app yii2 rest Api and angular client side
 

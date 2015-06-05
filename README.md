@@ -13,20 +13,18 @@ $ cd client-angular
 $ bower update
 ```
 
+See more info https://github.com/AngularYii2/angularyii2.github.io
+
 ###Init server:###
+
 [![Build Status](https://travis-ci.org/githubjeka/yii2-rest.svg)](https://travis-ci.org/githubjeka/yii2-rest)
+
 ```
 $ cd rest
 $ composer install --prefer-dist
 ```
-Create a new database and adjust the components['db'] configuration in environments/dev/common/config/main-local.php accordingly.
-```
-$ php init
-$ php yii migrate
-```
 
-See more info https://github.com/githubjeka/yii2-rest/blob/master/README.md
-
+For more information by init rest server please see description of [yii2-rest repository](https://github.com/githubjeka/yii2-rest)
 
 ## Test app yii2 rest Api and angular client side
 
@@ -34,7 +32,7 @@ Demo Client - [http://angularyii2.github.io/](http://angularyii2.github.io/)
 
 Demo Server - [https://yii2-rest-githubjeka.c9.io/rest/web/](https://yii2-rest-githubjeka.c9.io/rest/web/)
 
-Not Found (#404) is OK, because 
+Not Found (#404) is OK, because rules is
 ```php
 [
 'urlManager' => [
@@ -43,12 +41,14 @@ Not Found (#404) is OK, because
             'showScriptName' => false,
             'rules' => [
                 ['class' => 'yii\rest\UrlRule', 'controller' => ['v1/post', 'v1/comment', 'v2/post']],
-                'OPTIONS v1/user/login' => 'v1/user/login',
-                'POST v1/user/login' => 'v1/user/login',
+                'v1/user/login' => 'v1/user/login',
                 'POST v2/user/login' => 'v2/user/login',
                 'OPTIONS v2/user/login' => 'v2/user/login',
             ],
         ],
  ]
  ```
+ 
+### Additional sources of knowledge
 
+- [:link: How To Create Single Page Application in minutes! with AngularJs 1.3 and Yii 2.0 ](https://github.com/hscstudio/angular1-yii2) 

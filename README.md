@@ -1,4 +1,4 @@
-#GET STARTED
+# GET STARTED
 
 ```
 $ git clone https://github.com/githubjeka/angular-yii2.git
@@ -7,7 +7,7 @@ $ git submodule init
 $ git submodule update
 ```
 
-###Init client###
+### Init client ###
 ```
 $ cd client-angular
 $ bower update
@@ -15,7 +15,7 @@ $ bower update
 
 See more info https://github.com/AngularYii2/angularyii2.github.io
 
-###Init server:###
+### Init server: ###
 
 [![Build Status](https://travis-ci.org/githubjeka/yii2-rest.svg)](https://travis-ci.org/githubjeka/yii2-rest)
 
